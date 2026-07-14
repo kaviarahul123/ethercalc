@@ -65,7 +65,7 @@ RUN ./scripts/build-workerd-bundle.sh \
 # `bun` via setpriv before exec'ing workerd (SH-8). Kubernetes deploys
 # skip the drop — the Helm chart sets runAsNonRoot + fsGroup instead.
 RUN mkdir -p /data && chown bun:bun /data
-VOLUME ["/data"]
+# VOLUME ["/data"]
 
 EXPOSE 8000
 
